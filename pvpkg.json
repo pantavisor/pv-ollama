@@ -1,0 +1,20 @@
+{
+	"name": "ollama",
+	"url": "https://github.com/pantavisor/pv-ollama",
+	"package_url": "https://github.com/pantavisor/pv-ollama",
+	"license": "MIT",
+	"description": "Ollama with CUDA for the Jetson Nano AI box: model downloads and the Ollama API on port 11434, open to the Hollama UI.",
+	"arch": [
+		"arm64v8"
+	],
+	"src_extra": {
+		"args": {
+			"PV_GROUP": "app",
+			"PV_STATUS_GOAL": "STARTED",
+			"PV_RESTART_POLICY": "container",
+			"PV_DRIVERS_REQUIRED": [
+				"nvidia"
+			]
+		}
+	}
+}

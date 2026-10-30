@@ -11,9 +11,10 @@ packaged as a Pantavisor app container.
 - Serves the Ollama API on the device's port 11434, open to the Hollama UI
   on port 4173 (`OLLAMA_ORIGINS=*`). Models live in the persistent /models.
 
-Pantavisor needs the GPU device nodes in the part (`mdev.json`) and the
-nvidia driver (`PV_DRIVERS_REQUIRED`):
+Pantavisor gives the container the GPU device nodes of
+`pvpkg/generic/ollama/mdev.json` and loads the nvidia driver
+(`PV_DRIVERS_REQUIRED` in `pvpkg.json`). Build it with the stage builder:
 
-	pvr app add --from pv-ollama:jetson --platform linux/arm64 \
-	  --arg-json args.json ollama
-	cp mdev.json ollama/
+	pvr -b https://api.stage.pantahub.com build start --project nano-ai-box \
+	  --platform linux/arm64 --limit-seconds 14400 \
+	  --git-url https://github.com/pantavisor/pv-ollama --git-ref main
