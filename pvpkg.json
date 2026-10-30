@@ -1,6 +1,6 @@
 {
 	"name": "ollama",
-	"url": "https://github.com/pantavisor/pv-ollama",
+	"url": "ghcr.io/pantavisor/pv-ollama:latest",
 	"package_url": "https://github.com/pantavisor/pv-ollama",
 	"license": "MIT",
 	"description": "Ollama with CUDA for the Jetson Nano AI box: model downloads and the Ollama API on port 11434, open to the Hollama UI.",
